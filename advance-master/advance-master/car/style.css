@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    animation: shakebody linear 6s infinite;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover; 
+    position: absolute;
+    top: -144px; 
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x; 
+    position: absolute;
+    top: 70vh;
+    animation: carMove linear 13s infinite;
+
+}
+
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 44px;
+    bottom:30vh;
+    animation: shake linear .3s infinite;
+
+}
+
+.car1{
+    height: 100px;
+    width: 380px;
+    background-image: url(car_body1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 44px;
+    bottom:30vh;
+    animation: shake linear .3s infinite;
+
+}
+
+
+.wheel1 img{
+    width: 70px;
+    position: relative;
+    top:66px;
+    left:41px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+
+.wheel2 img{
+    width: 70px;
+    position: relative;
+    top: -5px;
+    left: 259px;
+    animation: wheelRotation linear .16s infinite;
+
+}
+
+
+.wheel11 img{
+    width: 70px;
+    position: relative;
+    top:66px;
+    left:41px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+
+.wheel21 img{
+    width: 70px;
+    position: relative;
+    top: -5px;
+    left: 259px;
+    animation: wheelRotation linear .16s infinite;
+
+}
+
+
+
+
+.box{
+    width: 380px;
+    height: 500px;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    position: relative;
+    bottom:5vh;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.box img{
+	width:100px;
+    margin-top:-50px ;
+}
+
+.header {
+	width: 300px;
+    height: 50px;
+    text-transform: uppercase;
+	display: inline-flex;
+    padding-top: 20px;
+    padding-bottom: 0;
+	justify-content: space-between;
+}
+
+.header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+	display: inline-flex;
+    padding-left: 25px;
+    padding-right: 25px;
+	justify-content: center;
+    cursor:pointer;
+}
+
+.header .active {
+    color: #FFBF00;
+	font-weight: bold;
+	position: relative;
+}
+
+.header .active:after {
+	position: absolute;
+    border: none;
+	content: "";
+}
+
+#errorMsg{
+    color:red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+}
+
+.content{
+    display: inline-flex;
+    overflow: hidden;
+}
+
+form {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+	flex-shrink: 0;
+	flex-direction: column;
+	transition: right 0.5s;
+}
+
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.extend form {
+	right: 100%;
+}
+
+input[type=text], input[type=password], input[type=email]{
+	display:block;
+    position: relative;
+	border: 4px solid #ffffff;
+	padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+ 	box-sizing: border-box;
+    font-size: 17px;
+    outline: none;
+}
+
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 4px solid #FFBF00;
+
+}
+
+input[type=submit]{
+    display:block;
+    position: relative;
+    border: 3px solid #FFBF00;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 25px;
+    background-color:#FFDF00 ;
+    text-align:center;
+    font-size: 20px;
+    color: black;
+	cursor:pointer;
+    outline: none;
+}
+	
+input[type=submit]:hover{
+	 background-color:#ffffff;
+     color: #000000;
+     font-weight: bold;
+}
+input[type=checkbox]{
+    background-color:#FFBF00;
+}
+#check{
+    margin-top: 10px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
